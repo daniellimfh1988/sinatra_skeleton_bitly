@@ -1,0 +1,19 @@
+<div class="container">
+<h1>Please find your relevant url posts below</h1>
+
+<% if not @url.nil? %>
+  <%@url.each do |posts|%>
+    <ul>
+      <a href="/urls/<%posts.short_url%>">
+      <li><%= 'http://localhost:9393/' + posts.short_url %></li>
+      </a>
+    </ul>
+    <%end%>
+<%else%>
+<h1>NO FUCKING CODE MORON!</h1>
+<%end%>
+
+<a href = "/sign_out">Sign out</a>
+<a href = "/shorten_url">Shorten your URL here!</a>
+
+</div>
